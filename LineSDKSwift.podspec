@@ -22,6 +22,7 @@ Pod::Spec.new do |s|
   s.source              = { :git => "https://github.com/line/line-sdk-ios-swift.git", :tag => "#{s.version}" }
 
   s.default_subspecs    = "Core"
+  s.resource_bundles = {'LineSDK.Privacy' => 'LineSDK/PrivacyInfo.xcprivacy'}
   s.pod_target_xcconfig = { 'OTHER_SWIFT_FLAGS' => '-DLineSDKCocoaPods' }
 
   s.subspec "Core" do |sp|
